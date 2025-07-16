@@ -1,0 +1,187 @@
+
+body{
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: #72bef0;
+  color: #333;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height:100vh;
+  padding-top: 70px;
+}
+.Todo-container{
+  background-color:  #e87373;
+  width: 100%;
+  max-width: 550px;
+  min-height: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+form{
+  display: flex;
+  margin-bottom: 20px;
+}
+.input-box{
+  flex-grow: 1;
+  font-size: 15px;
+  padding: 15px 15px;
+  /* border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px; */
+  border-radius: 8px 0 0 8px;
+  border: 2px solid #e1e8ed;
+  transition: 0.3s;
+  outline:none;
+}
+.input-box:focus{
+  border-color: rgb(12, 140, 190);
+}
+.input-box::placeholder{
+  font-size: 16px;
+}
+
+.Add-box{
+  padding: 15px 20px;
+  background-color: rgb(34, 171, 235);
+  /* border-bottom-right-radius: 6px;
+  border-top-right-radius:6px; */
+  border-radius: 0 8px 8px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+}
+
+.todo-list{
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+.Todo-items{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 30px;
+  padding: 15px;
+  background: #ebebeb;
+  border-bottom: 1px solid #e1e8ed;
+  transition: background-color 0.3s ease;
+}
+.ok-button{
+ border-radius: 50%;
+ width: 24px;
+ height: 24px;
+ background:none;
+ border:2px solid rgb(199, 197, 197);
+ cursor: pointer;
+ transition: 0.3s;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+.Todo-items.complete{
+  background-color:  #a3cb75;
+  border: none;
+}
+.Todo-items.complete .ok-button{
+  background-color: rgb(12, 195, 12);
+  border-color: rgb(10, 227, 100);
+}
+.Todo-items.complete .text-value{
+  text-decoration: line-through;
+  color: #79797d;
+}
+
+.ok-button::after{
+  content: 'ok';
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.Todo-items.complete .ok-button::after{
+  opacity: 1;
+  transition: 0.3s;
+ transform: scale(1.1);
+}
+.Todo-items .text-value{
+  flex-grow: 1;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-button{
+  opacity: 0;
+  border: none;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  background: transparent;
+  /* border: none;
+  background-color: transparent; 
+  color: #e74c3c;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease; */
+  
+}
+
+.Todo-items:hover .delete-button{ 
+   opacity: 1;
+   border: none;
+   background: transparent;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  border-top:2px solid rgb(187, 180, 180);
+  padding-top: 15px;
+  font-size: 15px;
+}
+.items-list{
+  color: rgb(4, 4, 102);
+}
+.filter-button button{
+ margin: 0 5px;
+ background:transparent;  
+ border: 1px solid transparent;
+ transition: 0.3s;
+ cursor: pointer;
+}
+.filter-button button:hover{
+  border-color: #e5e0e0;
+  border-radius: 2px;
+}
+.filter-button button.active{
+  color: rgb(4, 4, 102);
+  border-color: black;
+}
+.clear-button{
+  background: transparent;
+  border: 1px solid transparent;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.clear-button:hover{
+  border-color:  #e5e0e0;
+}
+
+.empty-list{
+  padding: 40px;
+  color: antiquewhite;
+}
+.empty-list p{
+  margin: 0;
+  font-size: 1.1em;
+}
